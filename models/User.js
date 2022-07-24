@@ -15,20 +15,18 @@ User.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     username: {
       type: DataTypes.STRING,
       allowNull: false,
-      unique: true
+      unique: true,
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [5]
-      }
-    }
+      
+    },
   },
   {
     hooks: {
@@ -51,7 +49,7 @@ User.init(
     // use underscores instead of camel-casing
     underscored: true,
     // make it so our model name stays in lowercase in the database
-    modelName: 'user'
+    modelName: 'user',
   }
 );
 
